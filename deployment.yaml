@@ -7,8 +7,8 @@ spec:
     app: fastapi-test-app
   ports:
     - protocol: TCP
-      port: 5000
-      targetPort: 5000
+      port: 3000
+      targetPort: 3000
 
 ---
 apiVersion: apps/v1
@@ -19,7 +19,7 @@ spec:
   selector:
     matchLabels:
       app: fastapi-test-app
-  replicas: 5
+  replicas: 1
   template:
     metadata:
       labels:
@@ -30,4 +30,4 @@ spec:
           image: ggndp/mnistclassifier:9ce1f95b90a6d3c583a92bdc0a4cdd2db3402b92
           imagePullPolicy: IfNotPresent
           ports:
-            - containerPort: 5000
+            - containerPort: 3000
