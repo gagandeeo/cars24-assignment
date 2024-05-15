@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fastapi-test-service
+  name: mnistclf-service
 spec:
   selector:
-    app: fastapi-test-app
+    app: mnistclf-app
   ports:
     - protocol: TCP
       port: 3000
@@ -15,19 +15,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fastapi-test-app
+  name: mnistclf-app
 spec:
   selector:
     matchLabels:
-      app: fastapi-test-app
+      app: mnistclf-app
   replicas: 1
   template:
     metadata:
       labels:
-        app: fastapi-test-app
+        app: mnistclf-app
     spec:
       containers:
-        - name: fastapi-test-app
+        - name: mnistclf-app
           image: ggndp/mnistclassifier:9ce1f95b90a6d3c583a92bdc0a4cdd2db3402b92
           imagePullPolicy: IfNotPresent
           ports:
