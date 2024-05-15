@@ -30,16 +30,6 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Extract metadata (tags, labels) for Docker
-        id: meta
-        uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
-        with:
-          images: ggndp/mnistclassifier
-
-      - name: Build and push Docker image
-        uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
-        with:
-          context: .
-          push: true
-          tags: ${{ github.run_id }}
-          labels: ${{ steps.meta.outputs.labels }}
+      - run: |
+          docker build . -t ggndp/mnistclassifier:${{ github.sha }}
+          docker push ggndp/mnistclassifier:${{ github.sha }}
