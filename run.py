@@ -3,7 +3,7 @@ import mlflow
 experiment_name = "SGDClassifier"
 entry_point = "Training"
 
-mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_tracking_uri("http://mlflowserver.centralindia.cloudapp.azure.com:5000")
 
 mlflow.projects.run(
     uri=".",
