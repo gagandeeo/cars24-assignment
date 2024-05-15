@@ -2,6 +2,7 @@ name: dev.mnist.env
 channels:
   - conda-forge
   - defaults
+dependencies:
   - pip:
       - azure-cli==2.60.0
       - azure-identity==1.16.0
