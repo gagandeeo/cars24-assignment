@@ -9,7 +9,7 @@ RUN /bin/bash -c "conda-pack -n dev.mnist.env -o /tmp/env.tar && mkdir venv && c
 
 RUN venv/bin/conda-unpack
 
-FROM python:3.9-slim AS runtime
+FROM python:3.9-alpine AS runtime
 
 ARG CACHEBUST=1
 
