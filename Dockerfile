@@ -15,7 +15,7 @@ ARG CACHEBUST=1
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 APP_USER=app APP_HOME=/home/app
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apk update && apk add -y --no-install-recommends \
     passwd \
     && rm -rf /var/lib/apt/lists/*
 
