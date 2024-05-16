@@ -11,7 +11,6 @@ RUN venv/bin/conda-unpack
 
 FROM python:3.9-alpine AS runtime
 
-ARG CACHEBUST=1
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 APP_USER=app APP_HOME=/home/app
 
