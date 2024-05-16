@@ -14,9 +14,9 @@ RUN apk add --no-cache py-pip openssl ca-certificates python3-dev build-base wge
 
 WORKDIR "$APP_HOME"/app
 
-COPY requirements.txt "$APP_HOME"/app/
-RUN python3 -m venv "$APP_HOME"/app
-RUN "$APP_HOME"/app/bin/pip install -r requirements.txt
+COPY requirements.txt .
+RUN python3 -m venv .
+RUN ./bin/pip install -r requirements.txt
 
 FROM python:3.9-alpine AS runtime-image
 
