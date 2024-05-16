@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-05-16T08:22:08.605Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="ZPEVFlBAIZF10vCBt9-0" version="24.0.0" type="device">
+<mxfile host="app.diagrams.net" modified="2024-05-16T08:55:17.180Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="DvPZ2PixJYDPXx9c1beX" version="24.0.0" type="device">
   <diagram name="Page-1" id="FmXCKLO-LZeBLhNWCPCd">
     <mxGraphModel dx="2074" dy="1132" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -113,6 +113,16 @@
         </mxCell>
         <mxCell id="Wyes8RcjERkSvGoP2RtP-48" value="Azure Cloud" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.azure_subscription;" vertex="1" parent="1">
           <mxGeometry x="230" y="269" width="36" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="Wyes8RcjERkSvGoP2RtP-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" target="Wyes8RcjERkSvGoP2RtP-37">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="200" y="780" as="sourcePoint" />
+            <mxPoint x="687.3499999999998" y="740" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="200" y="840" />
+              <mxPoint x="693" y="840" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
