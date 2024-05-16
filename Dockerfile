@@ -17,7 +17,7 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 APP_USER=app APP_HOME=/home/app
 RUN apk update && rm -rf /var/lib/apt/lists/*
 
 RUN adduser -D -g '' -s /bin/sh "$APP_USER"
-
+COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 # COPY --from=builder --chown="$APP_USER":"$APP_USER" venv "$APP_HOME"/dev.mnist.env
