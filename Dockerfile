@@ -15,6 +15,10 @@ ARG CACHEBUST=1
 
 ENV LANG=C.UTF-8 LC_ALL=C.UTF-8 APP_USER=app APP_HOME=/home/app
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    passwd \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN useradd --no-log-init -r -m -U "$APP_USER"
 
 COPY --from=builder --chown="$APP_USER":"$APP_USER" venv "$APP_HOME"/dev.mnist.env
