@@ -29,6 +29,19 @@ spec:
       containers:
         - name: mnistclf-app
           image: ggndp/mnistclassifier:9ce1f95b90a6d3c583a92bdc0a4cdd2db3402b92
+          env: 
+          - name: AZURE_CLIENT_ID
+            value: ${{ secrets.AZURE_CLIENT_ID }}
+          - name: AZURE_SUBSCRIPTION_ID
+            value: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          - name: AZURE_TENANT_ID
+            value: ${{ secrets.AZURE_TENANT_ID }}
+          - name: AZURE_CLIENT_SECRET
+            value: ${{ secrets.AZURE_CLIENT_SECRET }}
+          - name: AZURE_STORAGE_CONNECTION_STRING
+            value: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          - name: AZURE_STORAGE_ACCESS_KEY
+            value: ${{ secrets.AZURE_STORAGE_ACCESS_KEY }}
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
